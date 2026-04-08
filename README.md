@@ -44,3 +44,9 @@ Anda dapat menjalankan perintah berikut di terminal:
 cd command-api
 node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand
 ```
+
+### Langkah Selanjutnya:
+
+1. **Export Collection**: Di Postman, klik kanan pada folder collection Anda, pilih **Export**, lalu simpan di folder utama project Anda.
+2. **Double Check**: Pastikan di dalam JSON tersebut, URL-nya menggunakan variabel seperti `{{baseUrlCommand}}` agar penguji bisa dengan mudah mengganti-ganti port jika diperlukan.
+3. **JSON-COLLECTION-APITESTING** : nama folder json collection tester.
