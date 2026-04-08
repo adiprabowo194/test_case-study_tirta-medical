@@ -1,0 +1,15 @@
+const path = require('path');
+
+module.exports = {
+    // Config tetap di dalam src/config/
+    'config': path.resolve('src', 'config', 'config.cjs'),
+
+    // Models tetap di dalam src/models/
+    'models-path': path.resolve('src', 'models'),
+
+    // Seeders (jika ada) berada di luar src berdasarkan gambar Anda
+    'seeders-path': path.resolve('seeders'),
+
+    // PERBAIKAN: Hapus 'src' karena folder migrations ada di root (luar src)
+    'migrations-path': path.resolve('migrations')
+};

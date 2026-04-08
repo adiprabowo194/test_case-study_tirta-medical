@@ -1,0 +1,42 @@
+{
+  "name": "Search Sku",
+  "request": {
+    "type": "http",
+    "url": "http://localhost:3001/api/search",
+    "scripts": {
+      "preRequest": "",
+      "postResponse": ""
+    },
+    "method": "GET",
+    "queryParams": [
+      {
+        "id": 0.6871179676024288,
+        "key": "sku",
+        "value": "FNB-COFFEE-001",
+        "isEnabled": true
+      },
+      {
+        "id": 0.23220686035625104,
+        "key": "sku",
+        "value": "FNB-COFFEE-002",
+        "isEnabled": true
+      }
+    ],
+    "headers": [
+      {
+        "id": 1775614674166,
+        "key": "authorization",
+        "value": "API-KEY rahasia123",
+        "isEnabled": true,
+        "description": "",
+        "dataType": "string"
+      }
+    ],
+    "body": "",
+    "contentType": "text/plain",
+    "auth": {
+      "currentAuthType": "INHERIT",
+      "authConfigStore": {}
+    }
+  }
+}

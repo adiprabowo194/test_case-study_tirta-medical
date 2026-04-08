@@ -1,0 +1,38 @@
+{
+  "name": "Create Product",
+  "request": {
+    "type": "http",
+    "url": "http://localhost:3000/api/products",
+    "scripts": {
+      "preRequest": "",
+      "postResponse": ""
+    },
+    "method": "POST",
+    "queryParams": [],
+    "headers": [
+      {
+        "id": 1775576048815,
+        "key": "authorization",
+        "value": "API-KEY rahasia123",
+        "isEnabled": true,
+        "description": "",
+        "dataType": "string"
+      },
+      {
+        "id": 1775576070936,
+        "key": "content-type",
+        "value": "application/json",
+        "isEnabled": true,
+        "description": "",
+        "dataType": "string"
+      }
+    ],
+    "body": "{\n  \"sku\" : \"FNB-COFFEE-002\",\n  \"name\" : \"Kopi ABC SUSU 123\",\n  \"price\" : 2000,\n  \"stock\" : 100,\n  \"categoryId\" : \"1e9d68e0-db26-493a-8393-eab2d5949b74\"\n}",
+    "contentType": "application/json",
+    "auth": {
+      "currentAuthType": "INHERIT",
+      "authConfigStore": {}
+    }
+  },
+  "rank": "acreat17755762055961"
+}

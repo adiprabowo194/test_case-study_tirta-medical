@@ -1,0 +1,38 @@
+{
+  "name": "Create Categories",
+  "rank": "auntit17755758238301",
+  "request": {
+    "type": "http",
+    "url": "http://localhost:3000/api/categories",
+    "scripts": {
+      "preRequest": "",
+      "postResponse": ""
+    },
+    "method": "POST",
+    "queryParams": [],
+    "headers": [
+      {
+        "id": 1775575834535,
+        "key": "authorization",
+        "value": "API-KEY rahasia123",
+        "isEnabled": true,
+        "description": "",
+        "dataType": "string"
+      },
+      {
+        "id": 1775575857832,
+        "key": "content-type",
+        "value": "application/json",
+        "isEnabled": true,
+        "description": "",
+        "dataType": "string"
+      }
+    ],
+    "body": "{\n  \"name\" : \"Fashion\"\n}",
+    "contentType": "application/json",
+    "auth": {
+      "currentAuthType": "INHERIT",
+      "authConfigStore": {}
+    }
+  }
+}

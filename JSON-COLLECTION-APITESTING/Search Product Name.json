@@ -1,0 +1,43 @@
+{
+  "name": "Search Product Name",
+  "rank": "asearc1775614",
+  "request": {
+    "type": "http",
+    "url": "http://localhost:3001/api/search?price.start=2000&price.end=300000",
+    "scripts": {
+      "preRequest": "",
+      "postResponse": ""
+    },
+    "method": "GET",
+    "queryParams": [
+      {
+        "id": 0.5674840395718801,
+        "key": "price.start",
+        "value": "2000",
+        "isEnabled": true
+      },
+      {
+        "id": 0.9094647751105234,
+        "key": "price.end",
+        "value": "300000",
+        "isEnabled": true
+      }
+    ],
+    "headers": [
+      {
+        "id": 1775613688804,
+        "key": "authorization",
+        "value": "API-KEY rahasia123",
+        "isEnabled": true,
+        "description": "",
+        "dataType": "string"
+      }
+    ],
+    "body": "",
+    "contentType": "text/plain",
+    "auth": {
+      "currentAuthType": "INHERIT",
+      "authConfigStore": {}
+    }
+  }
+}
