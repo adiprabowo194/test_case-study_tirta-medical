@@ -1,4 +1,5 @@
 import { Product, Category } from '../models/index.js';
+import { publishToQueue } from '../utils/rabbitmq.js';
 
 export const create = async (req, res) => {
     try {
@@ -31,6 +32,18 @@ export const create = async (req, res) => {
             price,
             stock,
             categoryId
+        });
+
+        // KIRIM DATA KE RABBITMQ (Sinkronisasi ke Query-API)
+        await publishToQueue('product_created', {
+            id: product.id,
+            sku: product.sku,
+            name: product.name,
+            price: product.price,
+            stock: product.stock,
+            categoryId: product.categoryId,
+            createdAt: product.createdAt,
+            updatedAt: product.updatedAt
         });
 
         // 4. Response

@@ -1,4 +1,5 @@
 import { Category } from '../models/index.js';
+import { publishToQueue } from '../utils/rabbitmq.js';
 
 export const create = async (req, res) => {
     try {
@@ -15,6 +16,13 @@ export const create = async (req, res) => {
         }
 
         const category = await Category.create({ name });
+        // KIRIM KE RABBITMQ  
+        await publishToQueue('category_created', {
+            id: category.id,
+            name: category.name,
+            createdAt: category.createdAt,
+            updatedAt: category.updatedAt
+        });
 
         return res.status(201).json({
             data: {

@@ -2,6 +2,9 @@ import 'dotenv/config';
 import app from './src/app.js';
 import { sequelize } from './src/models/index.js';
 
+import { startProductWorker } from './src/workers/productWorker.js';
+import { startCategoryWorker } from './src/workers/categoryWorker.js';
+
 const PORT = process.env.PORT || 3001;
 
 // Gunakan pengecekan apakah file ini dijalankan langsung atau di-import
@@ -28,6 +31,8 @@ const startServer = async () => {
 // Jalankan hanya jika tidak sedang dalam mode testing
 if (process.env.NODE_ENV !== 'test') {
     startServer();
+    startProductWorker();
+    startCategoryWorker();
 }
 
 export { startServer };
